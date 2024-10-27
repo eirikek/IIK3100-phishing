@@ -38,8 +38,8 @@
         const password = document.getElementById('password').value;
 
         try {
-            // Send the data to the backend
-            const response = await fetch('/api/submit-login', {
+            // Send the data to the Netlify function
+            const response = await fetch('/.netlify/functions/submitLogin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
