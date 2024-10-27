@@ -1,3 +1,5 @@
+https://iik3100-social-engineering.netlify.app
+
 __Task:__
 
 Create a fake website with a login customized for me. Please don't register new domain or do anythig that costs money for you. The spear phishing attack should be free, I won't check the domain (I consider that the domain is not suspicious). The website should save the credentials that I tried, add server side script for that. (you don't need database, I'll be the only user of this site).
