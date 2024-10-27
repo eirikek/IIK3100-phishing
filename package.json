@@ -4,7 +4,7 @@
   "description": "Phishing simulation project for IIK3100",
   "main": "api/submit-login.js",
   "scripts": {
-    "dev": "http-server public -p 8080"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

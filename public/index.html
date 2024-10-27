@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
+<h1>NB! Please don’t enter real credentials. This page is fake and used for a phishing task in the course IIK3100.</h1>
 <div class="login-container">
     <div class="login-header">
         <img src="./images/bannerlogo.png" alt="NTNU Logo" class="ntnu-logo">
     </div>
-    <form action="/api/submit-login" method="POST">
+    <form onsubmit="submitForm(event)">
         <label for="username">Skriv inn brukernavn</label>
         <input type="text" id="username" name="username" required placeholder="Brukernavn">
 
@@ -26,5 +27,37 @@
         </div>
     </form>
 </div>
+
+<script>
+    async function submitForm(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Get the form data
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            // Send the data to the backend
+            const response = await fetch('/api/submit-login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            // Parse the JSON response
+            const result = await response.json();
+
+            // Show the success alert
+            alert(result.message || 'Account verified');
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Something went wrong. Please try again later.');
+        }
+    }
+</script>
+
 </body>
 </html>

