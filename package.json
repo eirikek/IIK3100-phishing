@@ -1,0 +1,10 @@
+{
+  "name": "iik3100-phishing",
+  "version": "1.0.0",
+  "description": "Phishing simulation project for IIK3100",
+  "main": "api/submit-login.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
