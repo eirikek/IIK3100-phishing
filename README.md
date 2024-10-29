@@ -9,6 +9,7 @@ __My page:__
 ![Bilde1](https://github.com/user-attachments/assets/e93daf9f-abb2-4db4-b6b8-99b3c5ac8517)
 
 __What an actual NTNU login page looks like:__
-![Bilde2](https://github.com/user-attachments/assets/70d43c5b-8e31-4687-b79d-ef1cbffd537d)
+![380514298-70d43c5b-8e31-4687-b79d-ef1cbffd537d](https://github.com/user-attachments/assets/77860931-f9e7-4ad8-9b4a-203592428bb9)
+
 
 
